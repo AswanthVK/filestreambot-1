@@ -68,7 +68,7 @@ async def start(b, m):
 <i>Click /help for more informations</i>\n
 <i><b>🍃 Bᴏᴛ Made Bʏ :</b>@NewBotz</i>\n""",
             parse_mode="HTML",
-            disable_web_page_preview=True,
+            disable_web_page_preview=True
             #reply_markup=InlineKeyboardMarkup( [ [InlineKeyboardButton('Owner', url=f"https://t.me/{Var.OWNER_USERNAME}"),
                                                                                        #InlineKeyboardButton('Follow ', url='https://github.com/Code-x-Mania') ] ]  ) )
                                                                                        

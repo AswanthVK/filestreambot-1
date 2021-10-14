@@ -95,13 +95,13 @@ async def private_receive_handler(c: Client, m: Message):
 
 <b>📦 Fɪʟᴇ ꜱɪᴢᴇ :</b> <i>{}</i>
 
-<b>📥 Dᴏᴡɴʟᴏᴀᴅ :</b> <i>{}</i>
+#<b>📥 Dᴏᴡɴʟᴏᴀᴅ :</b> <i>{}</i>
 
-<b> 🖥 WATCH    :</b> <i>{}</i>
+<b> 🖥 WATCH    :</b> <i>{}</i>"""
 
-<b>🚸 Nᴏᴛᴇ : LINK WON'T EXPIRE  </b>
+#<b>🚸 Nᴏᴛᴇ : LINK WON'T EXPIRE  </b>
 
-<i>© @AdarshGoelo5 </i>"""
+#<i>© @AdarshGoelo5 </i>"""
 
         await log_msg.reply_text(text=f"**RᴇQᴜᴇꜱᴛᴇᴅ ʙʏ :** [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n**Uꜱᴇʀ ɪᴅ :** `{m.from_user.id}`\n**Dᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ :** {stream_link}", disable_web_page_preview=True, parse_mode="Markdown", quote=True)
         await m.reply_text(
@@ -109,8 +109,8 @@ async def private_receive_handler(c: Client, m: Message):
             parse_mode="HTML", 
             quote=True,
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🖥STREAM", url=stream_link), #Stream Link
-                                                InlineKeyboardButton('Dᴏᴡɴʟᴏᴀᴅ📥', url=online_link)]]) #Download Link
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🖥STREAM", url=stream_link)]]) #, #Stream Link
+                                                #InlineKeyboardButton('Dᴏᴡɴʟᴏᴀᴅ📥', url=online_link)]]) #Download Link
         )
     except FloodWait as e:
         print(f"Sleeping for {str(e.x)}s")
@@ -137,8 +137,8 @@ async def channel_receive_handler(bot, broadcast):
             message_id=broadcast.message_id,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton("🖥STREAM ", url=stream_link),
-                     InlineKeyboardButton('Dᴏᴡɴʟᴏᴀᴅ📥', url=online_link)] 
+                    [InlineKeyboardButton("🖥STREAM ", url=stream_link)] #,
+                     #InlineKeyboardButton('Dᴏᴡɴʟᴏᴀᴅ📥', url=online_link)] 
                 ]
             )
         )

@@ -62,11 +62,15 @@ async def private_receive_handler(c: Client, m: Message):
                 disable_web_page_preview=True)
             return
     try:
+        file = m.document or m.video
+        if("video" not in file.mime_type):
+            await m.reply_text("I only supports video files.")
+            return
         log_msg = await m.forward(chat_id=Var.BIN_CHANNEL)
         stream_link = Var.URL + 'watch/' + str(log_msg.message_id)
-        shortlink = get_shortlink(stream_link) 
-        if shortlink:
-            stream_link = shortlink
+        #shortlink = get_shortlink(stream_link) 
+        #if shortlink:
+            #stream_link = shortlink
         online_link = Var.URL + 'download/'+ str(log_msg.message_id) 
         shortlinka = get_shortlink(online_link)
         if shortlinka:
@@ -91,13 +95,11 @@ async def private_receive_handler(c: Client, m: Message):
         msg_text ="""
 <i><u>𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱 !</u></i>
 
-<b>📂 Fɪʟᴇ ɴᴀᴍᴇ :</b> <i>{}</i>
+<b>📂 File Name :</b> <i>{}</i>
 
-<b>📦 Fɪʟᴇ ꜱɪᴢᴇ :</b> <i>{}</i>
+<b>📦 File Size :</b> <i>{}</i>
 
-#<b>📥 Dᴏᴡɴʟᴏᴀᴅ :</b> <i>{}</i>
-
-<b> 🖥 WATCH    :</b> <i>{}</i>"""
+<b> 🖥 Stream Link:</b> <i>{}</i>"""
 
 #<b>🚸 Nᴏᴛᴇ : LINK WON'T EXPIRE  </b>
 
@@ -105,11 +107,11 @@ async def private_receive_handler(c: Client, m: Message):
 
         await log_msg.reply_text(text=f"**RᴇQᴜᴇꜱᴛᴇᴅ ʙʏ :** [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n**Uꜱᴇʀ ɪᴅ :** `{m.from_user.id}`\n**Dᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ :** {stream_link}", disable_web_page_preview=True, parse_mode="Markdown", quote=True)
         await m.reply_text(
-            text=msg_text.format(file_name, file_size, online_link, stream_link),
+            text=msg_text.format(file_name, file_size, stream_link),
             parse_mode="HTML", 
             quote=True,
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🖥STREAM", url=stream_link)]]) #, #Stream Link
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🖥 STREAM NOW 🖥", url=stream_link)]]) #, #Stream Link
                                                 #InlineKeyboardButton('Dᴏᴡɴʟᴏᴀᴅ📥', url=online_link)]]) #Download Link
         )
     except FloodWait as e:

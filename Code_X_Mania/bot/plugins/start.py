@@ -63,17 +63,14 @@ async def start(b, m):
                 return
         await m.reply_text(
             text="""
-<i>👋 ꜰɪʟᴇ ᴛᴏ ʟɪɴᴋ ʙᴏᴛ ᴡɪᴛʜ ʙᴏᴛʜ ᴅᴏᴡɴʟᴏᴀᴅ ᴀɴᴅ ꜱᴛʀᴇᴀᴍ ʟɪɴᴋ ꜱᴜᴘᴘᴏʀᴛ</i>\n
+<i>👋 I'm File Stream Bot</i>\n
 <i>Send a file/video and see magic!<i>\n
-<i>Cʟɪᴄᴋ ᴏɴ /help ᴛᴏ ɢᴇᴛ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ</i>\n
-<i><b>🍃 Bᴏᴛ Made Bʏ :</b>@CodeXMania</i>\n\n
-<i><b>It is your responsibility to use wisely I dont take responsibilities of any voilations(of any kind)</i>\n
-<i><u>𝗪𝗔𝗥𝗡𝗜𝗡𝗚 🚸</u></i>\n
-<b>Dont Spam.</b>""",
+<i>Click /help for more informations</i>\n
+<i><b>🍃 Bᴏᴛ Made Bʏ :</b>@NewBotz</i>\n""",
             parse_mode="HTML",
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup( [ [InlineKeyboardButton('Owner', url=f"https://t.me/{Var.OWNER_USERNAME}"),
-                                                                                       InlineKeyboardButton('Follow ', url='https://github.com/Code-x-Mania') ] ]  ) )
+            #reply_markup=InlineKeyboardMarkup( [ [InlineKeyboardButton('Owner', url=f"https://t.me/{Var.OWNER_USERNAME}"),
+                                                                                       #InlineKeyboardButton('Follow ', url='https://github.com/Code-x-Mania') ] ]  ) )
                                                                                        
                                                                                        
                                                                             
@@ -211,13 +208,13 @@ async def help_handler(bot, message):
 <i>I ᴡɪʟʟ ᴘʀᴏᴠɪᴅᴇ ᴇxᴛᴇʀɴᴀʟ ᴅɪʀᴇᴄᴛ ᴅᴏᴡɴʟᴏᴀᴅ AND STREAM ʟɪɴᴋ !.</i>\n
 <u>𝗪𝗔𝗥𝗡𝗜𝗡𝗚 🚸</u>\n
 <b> SPAM ʟᴇᴀᴅꜱ ᴛᴏ ᴘᴇʀᴍᴀɴᴇɴᴛ ʙᴀɴ .</b>\n
-<i>Cᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ (ᴏʀ) ʀᴇᴘᴏʀᴛ ʙᴜɢꜱ</i> <b>: <a href='https://t.me/CodeXmania'>[ ᴄʟɪᴄᴋ ʜᴇʀᴇ ]</a></b>""",
+<i>Contact support group to Report bugs</i> <b>: <a href='https://t.me/NewBotzSupport'>[ ᴄʟɪᴄᴋ ʜᴇʀᴇ ]</a></b>""",
         parse_mode="HTML",
         disable_web_page_preview=True,
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [InlineKeyboardButton("🏵 DEV", url="https://GitHub.com/code-x-mania")],
-                [InlineKeyboardButton("🍺 FOLLOW", url="https://GitHub.com/code-x-mania")]
-            ]
-        )
+        #reply_markup=InlineKeyboardMarkup(
+            #[
+                #[InlineKeyboardButton("🏵 DEV", url="https://GitHub.com/code-x-mania")],
+                #[InlineKeyboardButton("🍺 FOLLOW", url="https://GitHub.com/code-x-mania")]
+            #]
+        #)
     )

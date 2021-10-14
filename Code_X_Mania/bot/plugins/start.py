@@ -70,9 +70,9 @@ async def start(b, m):
             parse_mode="HTML",
             disable_web_page_preview=True
             #reply_markup=InlineKeyboardMarkup( [ [InlineKeyboardButton('Owner', url=f"https://t.me/{Var.OWNER_USERNAME}"),
-                                                                                       #InlineKeyboardButton('Follow ', url='https://github.com/Code-x-Mania') ] ]  ) )
-                                                                                       
-                                                                                       
+                                                                                       #InlineKeyboardButton('Follow ', url='https://github.com/Code-x-Mania') ] ]  ) 
+        )
+                                                                                                                                                                           
                                                                             
     else:
         if Var.UPDATES_CHANNEL != "None":

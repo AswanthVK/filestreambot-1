@@ -210,7 +210,7 @@ async def help_handler(bot, message):
 <b> SPAM ʟᴇᴀᴅꜱ ᴛᴏ ᴘᴇʀᴍᴀɴᴇɴᴛ ʙᴀɴ .</b>\n
 <i>Contact support group to Report bugs</i> <b>: <a href='https://t.me/NewBotzSupport'>[ ᴄʟɪᴄᴋ ʜᴇʀᴇ ]</a></b>""",
         parse_mode="HTML",
-        disable_web_page_preview=True,
+        disable_web_page_preview=True
         #reply_markup=InlineKeyboardMarkup(
             #[
                 #[InlineKeyboardButton("🏵 DEV", url="https://GitHub.com/code-x-mania")],

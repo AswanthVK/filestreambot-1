@@ -205,7 +205,7 @@ async def help_handler(bot, message):
     await message.reply_text(
         text="""
 <i>Sᴇɴᴅ ᴍᴇ ᴀɴʏ ꜰɪʟᴇ (ᴏʀ) ᴍᴇᴅɪᴀ ꜰʀᴏᴍ ᴛᴇʟᴇɢʀᴀᴍ.</i>\n
-<i>I ᴡɪʟʟ ᴘʀᴏᴠɪᴅᴇ ᴇxᴛᴇʀɴᴀʟ ᴅɪʀᴇᴄᴛ ᴅᴏᴡɴʟᴏᴀᴅ AND STREAM ʟɪɴᴋ !.</i>\n
+<i>I ᴡɪʟʟ ᴘʀᴏᴠɪᴅᴇ ᴇxᴛᴇʀɴᴀʟ STREAM ʟɪɴᴋ !.</i>\n
 <u>𝗪𝗔𝗥𝗡𝗜𝗡𝗚 🚸</u>\n
 <b> SPAM ʟᴇᴀᴅꜱ ᴛᴏ ᴘᴇʀᴍᴀɴᴇɴᴛ ʙᴀɴ .</b>\n
 <i>Contact support group to Report bugs</i> <b>: <a href='https://t.me/NewBotzSupport'>[ ᴄʟɪᴄᴋ ʜᴇʀᴇ ]</a></b>""",

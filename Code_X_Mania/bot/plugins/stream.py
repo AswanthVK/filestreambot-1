@@ -99,7 +99,7 @@ async def private_receive_handler(c: Client, m: Message):
 
 <b>📦 File Size :</b> <i>{}</i>
 
-<b> 🖥 Stream Link:</b> <i>{}</i>"""
+<b> 🖥 Stream Link:</b> <code>{}</code>"""
 
 #<b>🚸 Nᴏᴛᴇ : LINK WON'T EXPIRE  </b>
 
